@@ -4,12 +4,18 @@
 function countNumbers(n)
 {
 
-    let i=0;
+    let i=1;
+    let simpleNumbers=[];
+    let compositeNumbers=[];
 
-    while (i<=n) {
-        console.log(i++)
-        //i++;
+    for (i;i<=n;i++) {
+        if ((i%2==0) && (i!=2) || (i%3==0)&& (i!=3) || (i%5==0)&& (i!=5) || (i%7==0)&& (i!=7)) {
+           compositeNumbers.push(i);
+        } else {
+            simpleNumbers.push(i);
+        }
     }
+    console.log('Список простых чисел: '+simpleNumbers);
 }
 console.log(countNumbers(100));
 
