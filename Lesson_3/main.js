@@ -17,7 +17,7 @@ function countNumbers(n)
     }
     console.log('Список простых чисел: '+simpleNumbers);
 }
-console.log(countNumbers(100));
+countNumbers(100);
 
 //Task 2. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
 //Задачи:
@@ -55,18 +55,17 @@ function countBasketPrice(basket)
             } 
     } 
     } 
-    console.log(sum);
+    return sum;
 }
 
-console.log(countBasketPrice(basket));
+countBasketPrice(basket);
 
 //Task 3*. Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
 //for(…){// здесь пусто}
 
-let i=0;
 let n=9;
 
-for (i; i<=n; console.log(i++)) {
+for (i=0; i<=n; console.log(i++)) {
 
 }
 
@@ -87,8 +86,9 @@ while (i<=n) {
     s=s+'x';
     i++;
 }
+return s;
 }
-console.log(drawPyramid(20));
+drawPyramid(20);
 
 // альтернативный вариант с for 
 //for (i;i<=n;i++){
@@ -102,29 +102,27 @@ console.log(drawPyramid(20));
 //*/
 
 function rle(value) {
-    let i=0;
-    let n=value.length-1;
+    let valueLength=value.length-1;
     let repeat=1;
-    let compres=value[i]; // переменная, хранящая преобразованную строку
+    let compres=value[0]; // переменная, хранящая преобразованную строку
 
-    for (i;i<n;i++) {
+    for (i=0;i<valueLength;i++) {
         if (value[i]==value[i+1]) {
            repeat++; 
         } else if (repeat==1) {
-            compres=compres+value[i+1];
+            compres += value[i+1];
         } else  {
-            compres=compres+repeat+value[i+1];
-     //       console.log(compres);
+            compres += repeat+value[i+1];
             repeat=1;
         }
-    }  if (repeat==1) {
-        console.log(compres);
-    } else {
-        compres=compres+repeat;
-        console.log(compres);
-    }
+    } 
+   
+    if (repeat != 1) compres += repeat;
+
+return compres;
 }
-console.log(rle('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'));
+
+rle('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD');
 
 
 
