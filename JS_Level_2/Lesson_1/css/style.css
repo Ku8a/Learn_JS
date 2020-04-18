@@ -1,0 +1,13 @@
+
+
+.goods-item {
+    width:100px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    outline: 2px black solid;
+}
+
+.cart-button {
+    border-radius: 5px;
+}
