@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .goods-item, .basket-item {
@@ -33,4 +34,41 @@
 .buy:hover{
     background-color: #5b5c5e;
     color: #ffffff;
+=======
+
+
+.goods-item, .basket-item {
+    width:100px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    outline: 2px black solid;
+    text-align: center;
+}
+
+.link {
+   color: blue;
+}
+
+.link:hover {
+    color: brown;
+}
+
+.header-total {
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.buy {
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 5px;
+  /*  background-color: #a6a8ac;
+    color: #ffffff;*/
+}
+
+.buy:hover{
+    background-color: #5b5c5e;
+    color: #ffffff;
+>>>>>>> ab8dcf8d2468d987e636f11b3230dd2497cadf12
 }
